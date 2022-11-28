@@ -3,7 +3,7 @@
   import TypedText from './lib/TypedText.svelte';
   import ExperienceBullet from './lib/ExperienceBullet.svelte';
   import ProjectBullet from './lib/ProjectBullet.svelte';
-  const introTime = 1;  // Length of typewriter animation
+  const introTime = 1.6;  // Length of typewriter animation
 </script>
 
 <main>
