@@ -53,7 +53,6 @@
   }
 
   .content {
-    margin-top: 1rem;
     margin-left: 1.2rem;
     width: 100%;
   }

@@ -63,33 +63,32 @@
       <TypedText text="Projects" delay={introTime+0.4}/>
     </span>
     <span slot="content">
-     Links to personal projects of mine.
-     <ul>
-       <ProjectBullet
-         title="Carbon footprint calculator"
-         link="https://frankharkins.github.io/carbon-footprint/"
-         description={
-           `This is a small project I created to help me learn web development
-            with Svelte. After trying other online calculators, I wanted to
-            create something that showed you the effects of lifestyle changes in
-            real time.`
-         }
-        />
+      <p>Links to personal projects of mine.</p>
+      <ul>
         <ProjectBullet
-          title="CNOT"
-          link="https://cnot.io"
+          title="Carbon footprint calculator"
+          link="https://frankharkins.github.io/carbon-footprint/"
           description={
-            `A website introducing quantum computing to undergraduate students.`
+            `This is a small project I created to help me learn web development
+             with Svelte. After trying other online calculators, I wanted to
+             create something that showed you the effects of lifestyle changes in
+             real time.`
           }
-        />
-        <ProjectBullet
-          title="Launchpad whackamole"
-          link="https://github.com/frankharkins/launchpad-whackamole"
-          description={
-            `A game for the original Novation Launchpad (a midi controller).`
-          }
-        />
-
+         />
+         <ProjectBullet
+           title="CNOT"
+           link="https://cnot.io"
+           description={
+             `A website introducing quantum computing to undergraduate students.`
+           }
+         />
+         <ProjectBullet
+           title="Launchpad whackamole"
+           link="https://github.com/frankharkins/launchpad-whackamole"
+           description={
+             `A game for the original Novation Launchpad (a midi controller).`
+           }
+         />
       </ul>
     </span>
   </Accordian>
