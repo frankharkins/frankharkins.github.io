@@ -1,6 +1,7 @@
 <script>
   import { slide } from 'svelte/transition';
   export let title = 'Title';
+  export let delay = 0;
   let isOpen = false;
   let component;
   function toggle() {
@@ -18,8 +19,8 @@
 <div bind:this={component}
      class="component {isOpen ? 'open' : ''}">
   <button on:click={toggle}>
-    <span class="chevron force-monospace">
-      {isOpen ? '>' : '-'}
+    <span class="chevron force-monospace" style="--delay: {delay}s">
+      {isOpen ? '=' : '-'}
     </span>
     <h2>
       <slot name="title">
@@ -64,12 +65,9 @@
   }
 
   .chevron {
-    opacity: 0;
-    transition: opacity 0.1s;
-  }
-
-  button:hover .chevron {
-    opacity: 1;
+    animation: hideChevron;
+    animation-duration: var(--delay);
+    animation-fill-mode: forwards;
   }
 
   button:focus .chevron {
@@ -77,7 +75,9 @@
     color: var(--color-yellow);
   }
 
-  .open .chevron {
-    opacity: 1;
+  @keyframes hideChevron {
+    0%   { opacity: 0 }
+    99%  { opacity: 0 }
+    100% { opacity: 1 }
   }
 </style>

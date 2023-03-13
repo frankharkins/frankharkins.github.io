@@ -13,7 +13,7 @@
   <TypedText text="Developer / technical writer" delay={introTime+0.2}/>
   <br>
 
-  <Accordian>
+  <Accordian delay={introTime+0.5}>
     <span slot="title">
       <TypedText text="About" delay={introTime+0.3}/>
     </span>
@@ -58,7 +58,7 @@
       <p>Contact me for further experience and details</p>
     </span>
   </Accordian>
-  <Accordian>
+  <Accordian delay={introTime+0.6}>
     <span slot="title">
       <TypedText text="Projects" delay={introTime+0.4}/>
     </span>
@@ -92,7 +92,7 @@
       </ul>
     </span>
   </Accordian>
-  <Accordian>
+  <Accordian delay={introTime+0.7}>
     <span slot="title">
       <TypedText text="Contact" delay={introTime+0.5}/>
     </span>
