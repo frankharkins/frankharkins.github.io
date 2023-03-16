@@ -1,5 +1,4 @@
 <script>
-  import { slide } from 'svelte/transition';
   export let title = 'Title';
   export let delay = 0;
   let isOpen = false;
@@ -30,7 +29,7 @@
   </button>
 
   {#if isOpen}
-  <div class="content" transition:slide={{ duration: 200 }}>
+  <div class="content">
     <slot name="content"></slot>
   </div>
   {/if}
@@ -56,6 +55,7 @@
   .content {
     margin-left: 1.2rem;
     width: 100%;
+    box-sizing: border-box;
   }
 
   .force-monospace {
@@ -72,7 +72,6 @@
 
   button:focus .chevron {
     opacity: 1;
-    color: var(--color-yellow);
   }
 
   @keyframes hideChevron {

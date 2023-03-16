@@ -1,6 +1,6 @@
 <script>
   export let text;
-  export let cursor = false;
+  export let cursor = true;
   export let speed = text.length/100;
   export let delay = 0;
   let nChars = text.length;

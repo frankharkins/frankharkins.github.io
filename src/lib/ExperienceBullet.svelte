@@ -18,7 +18,7 @@
 
 <style>
   .title {
-    color: var(--color-magenta);
+    color: var(--color-white);
   }
 
   li {
