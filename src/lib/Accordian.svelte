@@ -1,6 +1,4 @@
 <script>
-  export let title = 'Title';
-  export let delay = 0;
   let isOpen = false;
   let component;
   function toggle() {

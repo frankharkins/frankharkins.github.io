@@ -5,7 +5,7 @@
   import ProjectBullet from './lib/ProjectBullet.svelte';
   import Spinner from './lib/Spinner.svelte';
   const timeSpacing = 0.3;
-  const maxState = 5;
+  const maxState = 6;
   let state = 0;
 
   function nextState () {
@@ -40,14 +40,23 @@
       </span>
       <span slot="content">
         <p>
-        Hi, I'm Frank. I have experience in physics, technical writing, and
-        software development.
+        Hi, I'm Frank.
         </p>
         <p>
+        I have experience in physics, technical writing, and
+        software development.
         I care about effective communication, and creating high-quality
         products.
         </p>
-        <h3>Experience:</h3>
+      </span>
+    </Accordian>
+  {/if}
+  {#if state > 3}
+    <Accordian>
+      <span slot="title">
+        Experience
+      </span>
+      <span slot="content">
         <ul>
           <ExperienceBullet
             title="Developer advocate"
@@ -64,48 +73,49 @@
           />
           <ExperienceBullet
             title="Tutor"
-            comment={'GCSE & A-level maths and physics'}
             info={[
               'Self-employed',
               '2018-2020'
             ]}
+            description={'I taught GCSE & A’-level Maths and Physics.'}
           />
           <ExperienceBullet
             title="Student"
-            comment="Physics BSc"
             info={[
               'University of Leeds',
               '2015-2018'
             ]}
+            description={
+            `I studied Physics, graduating with a 2:1. My dissertation was on
+            quantum computing.`
+            }
           />
         </ul>
-        <p>Contact me for further experience and details</p>
       </span>
     </Accordian>
   {/if}
-  {#if state > 3}
+  {#if state > 4}
     <Accordian>
       <span slot="title">
         Projects
       </span>
       <span slot="content">
-        <p>Links to personal projects of mine.</p>
+        <p>Personal projects of mine.</p>
         <ul>
           <ProjectBullet
             title="Carbon footprint calculator"
             link="https://frankharkins.github.io/carbon-footprint/"
             description={
-              `This is a small project I created to help me learn web development
-               with Svelte. After trying other online calculators, I wanted to
-               create something that showed you the effects of lifestyle changes in
-               real time.`
+              `A small project to help me learn web development with Svelte.
+            After trying other online calculators, I wanted to create something
+            that showed the effects of lifestyle changes in real time.`
             }
            />
            <ProjectBullet
              title="CNOT"
              link="https://cnot.io"
              description={
-               `A website introducing quantum computing to undergraduate students.`
+               `An introduction to quantum computing.`
              }
            />
            <ProjectBullet
@@ -119,7 +129,7 @@
       </span>
     </Accordian>
   {/if}
-  {#if state > 4}
+  {#if state > 5}
     <Accordian>
       <span slot="title">
         Contact
@@ -132,7 +142,7 @@
       </span>
     </Accordian>
   {/if}
-  {#if 5 > state && state > 0 }
+  {#if 6 > state && state > 0 }
     <Spinner />
   {/if}
 </main>
