@@ -7,18 +7,21 @@
 
 <li>
   <span class="title">{title}</span> {comment ? `(${comment})` : ''}
-  <span class="info">
-  {#each info as line}
-    <br>{line}
-  {/each}
-  </span>
-  <p>{@html description}</p>
+  <div class="content">
+    {#each info as line}
+      {line}<br>
+    {/each}
+    <p>{@html description}</p>
+  </div>
 </li>
 
 
 <style>
-  .title {
-    color: var(--color-white);
+  .content {
+    padding-top: 0;
+    margin-left: -.8rem;
+    padding-left: .8rem;
+    border-left: 1px solid var(--color-title);
   }
 
   li {

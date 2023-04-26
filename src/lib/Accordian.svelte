@@ -17,16 +17,17 @@
 
 <div bind:this={component}
      class="component {isOpen ? 'open' : ''}">
-  <button on:click={toggle}>
-    <span class="chevron force-monospace" style="--delay: {delay}s">
-      {isOpen ? '=' : '-'}
-    </span>
-    <h2>
-      <slot name="title">
-        {title}
-      </slot>
-    </h2>
-  </button>
+  <span class="chevron force-monospace">
+    {isOpen ? '=' : '-'}
+  </span>
+  <div style="display: inline-block;">
+    <button on:click={toggle}>
+      <h2>
+        <slot name="title">
+        </slot>
+      </h2>
+    </button>
+  </div>
 
   {#if isOpen}
   <div class="content">
@@ -47,9 +48,28 @@
   }
 
   button {
+    display: inline-block;
     all: unset;
     cursor: pointer;
     width: 100%;
+    transition: background 0.2s ease;
+  }
+
+  button:hover, button:active {
+    background: var(--color-title);
+  }
+
+  button:hover > h2, button:active > h2 {
+    color: var(--color-bg);
+  }
+
+  button:focus {
+    outline: 1px solid var(--color-body);
+    outline-offset: 1px;
+  }
+
+  button:focus:not(:focus-visible) {
+    outline: none;
   }
 
   .content {
@@ -64,19 +84,4 @@
     text-align: center;
   }
 
-  .chevron {
-    animation: hideChevron;
-    animation-duration: var(--delay);
-    animation-fill-mode: forwards;
-  }
-
-  button:focus .chevron {
-    opacity: 1;
-  }
-
-  @keyframes hideChevron {
-    0%   { opacity: 0 }
-    99%  { opacity: 0 }
-    100% { opacity: 1 }
-  }
 </style>
