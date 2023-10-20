@@ -19,9 +19,7 @@
 <style>
   .content {
     padding-top: 0;
-    margin-left: -.8rem;
-    padding-left: .8rem;
-    border-left: 1px solid var(--color-title);
+    padding-left: .25rem;
   }
 
   li {

@@ -76,6 +76,10 @@
     box-sizing: border-box;
   }
 
+  .chevron {
+    font-weight: bold;
+  }
+
   .force-monospace {
     display: inline-block;
     width: 0.602rem;

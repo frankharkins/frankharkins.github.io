@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&family=Source+Sans+3&display=swap');
+
+.mono {
+  font-family: 'Source Code Pro', Helvetica, Arial, sans-serif;
+}
 
 :root {
-  font-family: Inconsolata, Helvetica, Arial, sans-serif;
+  font-family: 'Source Code Pro', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
-  color-scheme: only light;
+  color-scheme: only dark;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,24 +17,24 @@
   -webkit-text-size-adjust: 100%;
 
   --color-black: #0d1117;
-  --color-white: #ffffff;
+  --color-white: #ecf2f8;
   --color-grey: #57606a;
   --color-cursor: #58a6ff;
   --color-blue: #0969da;
+  --color-cyan: #56d4dd;
 
-  --color-title: var(--color-black);
-  --color-bg: var(--color-white);
-  --color-body: var(--color-black);
-  --color-link: var(--color-blue);
-  --color-focus: var(--color-blue);
-  --color-cursor: var(--color-black);
+  --color-title: var(--color-white);
+  --color-bg: var(--color-black);
+  --color-body: var(--color-grey);
+  --color-link: var(--color-cyan);
+  --color-focus: var(--color-cyan);
+  --color-cursor: var(--color-cyan);
 
 }
 
 body {
   margin: 0;
   display: flex;
-  min-width: 320px;
   min-height: 100vh;
   color: var(--color-body);
   background-color: var(--color-bg);
@@ -83,9 +87,9 @@ ul li:before {
 }
 
 p {
-  max-width: 18rem;
+  max-width: 32rem;
   font-size: .9rem;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   margin: .5rem 0;
   text-align: justify;
 }
@@ -97,7 +101,7 @@ p:last-of-type {
 #app {
   width: 66%;
   margin: 8vw;
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
 }
 
 @media screen and (max-width: 600px) {

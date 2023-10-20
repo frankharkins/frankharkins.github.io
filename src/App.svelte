@@ -28,9 +28,9 @@
     <TypedText text="Frank Harkins" speed={1.5} delay={0.5}/>
   </h1>
   {#if state > 1}
-    <h3 style="margin-bottom: 3rem">
+    <p class="mono" style="margin-bottom: 3rem;">
       Developer / technical writer
-    </h3>
+    </p>
   {/if}
 
   {#if state > 2}

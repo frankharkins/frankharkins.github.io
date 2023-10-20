@@ -8,7 +8,7 @@
 </script>
 
 <span class="component"
-     style="--end-width: {nChars*0.5}rem;
+     style="--end-width: {nChars*0.6}rem;
             --cursor-width: {cursor ? '0.5rem' : '0'};
             --speed: {speed}s;
             --num-frames: {nChars};
