@@ -1,6 +1,5 @@
 set -e
 
-# Todo: make sure user is at root too
 if [ "$(git branch --show-current)" != "main" ]; then
     echo "You must be on main branch with no diffs to deploy"
     exit 1
@@ -10,8 +9,12 @@ if [ $(git diff --name-only) ]; then
     exit 1
 fi
 
+cd $(git rev-parse --show-toplevel)
+
 npm run build
 
 git add dist -f
 git commit -m "Build site"
 git subtree push --prefix dist origin gh-pages
+
+cd -
