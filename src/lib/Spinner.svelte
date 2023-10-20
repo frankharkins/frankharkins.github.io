@@ -3,9 +3,10 @@
   let index = 0
 
   function nextChar () {
-    index = (index + 1) % 4
-    char = ['|', '/', '-', '\\'][index]
-    window.setTimeout(nextChar, 100)
+    let frames = [ "⣾", "⣽", "⣻", "⢿", "⡿", "⣟", "⣯", "⣷" ]
+    index = (index + 1) % frames.length
+    char = frames[index]
+    window.setTimeout(nextChar, 80)
   }
 
   nextChar()
