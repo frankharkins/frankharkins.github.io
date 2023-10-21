@@ -29,7 +29,7 @@
   </h1>
   {#if state > 1}
     <p class="mono" style="margin-bottom: 3rem;">
-      Developer / technical writer
+      Developer / science writer
     </p>
   {/if}
 
@@ -40,13 +40,15 @@
       </span>
       <span slot="content">
         <p>
-        Hi, I'm Frank.
-        </p>
+        I'm from the north of England, but now live in London.
         <p>
-        I have experience in physics, technical writing, and
-        software development.
-        I care about effective communication, and creating high-quality
-        products.
+        I currently work for IBM Quantum, where I sit somewhere between science
+        writer and software developer. My role is helping people use our
+        products through documentation, software support, and teaching about
+        quantum computing in general.
+        <p>
+        The most important skill in my work is making things easier to
+        understand, whether it's a concept in physics or a block of code.
         </p>
       </span>
     </Accordian>
@@ -65,10 +67,18 @@
               '2020 - present'
             ]}
             description={
-            `I write and manage content for IBM's online <a
-             href='https://qiskit.org/learn/'>quantum computing textbook</a>.
-             I act as both a subject matter expert, and a bridge between academics
-             and software developers.`
+            `A developer advocate improves the experience of developing using
+            IBM Quantum's products. For me, this includes helping developers
+            understand concepts in quantum computing through <a
+            href="https://learning.quantum-computing.ibm.com/">learning
+            materials</a>, as well as supporting their projects through our
+            official software <a href="https://qiskit.org/ecosystem/">
+            Ecosystem</a>.
+            <p>
+            I previously wrote and managed content for IBM's online <a
+            href='https://qiskit.org/learn/'>quantum computing textbook</a>.
+            I was both a subject matter expert, and a bridge between academics
+            and software developers.`
             }
           />
           <ExperienceBullet
