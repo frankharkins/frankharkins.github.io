@@ -5,7 +5,7 @@
   import ProjectBullet from './lib/ProjectBullet.svelte';
   import Spinner from './lib/Spinner.svelte';
   const timeSpacing = 0.3;
-  const maxState = 6;
+  const maxState = 7;
   let state = 0;
 
   function nextState () {
@@ -149,7 +149,7 @@
       </span>
     </Accordian>
   {/if}
-  {#if state > 5}
+  {#if state > 6}
     <Accordian>
       <span slot="title">
         Contact
@@ -162,7 +162,7 @@
       </span>
     </Accordian>
   {/if}
-  {#if 6 > state && state > 0 }
+  {#if maxState > state && state > 0 }
     <Spinner />
   {/if}
 </main>
