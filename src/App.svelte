@@ -142,6 +142,16 @@
   {#if state > 5}
     <Accordian>
       <span slot="title">
+        Blog
+      </span>
+      <span slot="content">
+        <p>Check out <a href="/blog">my blog</a>.
+      </span>
+    </Accordian>
+  {/if}
+  {#if state > 5}
+    <Accordian>
+      <span slot="title">
         Contact
       </span>
       <span slot="content">
