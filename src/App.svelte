@@ -67,18 +67,17 @@
               '2020 - present'
             ]}
             description={
-            `A developer advocate improves the experience of developing using
-            IBM Quantum's products. For me, this includes helping developers
-            understand concepts in quantum computing through <a
-            href="https://learning.quantum-computing.ibm.com/">learning
-            materials</a>, as well as supporting their projects through our
-            official software <a href="https://qiskit.org/ecosystem/">
-            Ecosystem</a>.
-            <p>
-            I previously wrote and managed content for IBM's online <a
-            href='https://qiskit.org/learn/'>quantum computing textbook</a>.
-            I was both a subject matter expert, and a bridge between academics
-            and software developers.`
+              `A developer advocate improves the experience for developers that use
+              IBM Quantum's products. For me, this includes helping developers
+              understand concepts in quantum computing through learning materials and
+              <a href='https://github.com/Qiskit/documentation/'>documentation</a>,
+               as well as supporting their projects through our official software
+               <a href="https://qiskit.org/ecosystem/">Ecosystem</a>.
+              <p>
+              I previously wrote and managed content for IBM's online <a
+              href='https://github.com/qiskit/textbook'>quantum computing textbook</a>.
+              I was both a subject-matter expert and a bridge between academics,
+              designers, and software developers.`
             }
           />
           <ExperienceBullet
@@ -87,7 +86,11 @@
               'Self-employed',
               '2018-2020'
             ]}
-            description={'I taught GCSE & A’-level Maths and Physics.'}
+            description={
+              `I taught GCSE & A’-level Maths and Physics. During
+              this time, I also created a website to teach quantum computing to
+              students of different backgrounds.`
+            }
           />
           <ExperienceBullet
             title="Student"
@@ -112,6 +115,13 @@
       <span slot="content">
         <p>Personal projects of mine.</p>
         <ul>
+          <ProjectBullet
+            title="quPython"
+            link="https://github.com/frankharkins/qupython"
+            description={
+              `A reimagining of how we write quantum programs in Python.`
+            }
+           />
           <ProjectBullet
             title="Carbon footprint calculator"
             link="https://frankharkins.github.io/carbon-footprint/"
