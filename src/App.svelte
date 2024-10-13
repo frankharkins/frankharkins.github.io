@@ -29,7 +29,7 @@
   </h1>
   {#if state > 1}
     <p class="mono" style="margin-bottom: 3rem;">
-      Developer / science writer
+      Developer advocate
     </p>
   {/if}
 
@@ -40,16 +40,14 @@
       </span>
       <span slot="content">
         <p>
-        I'm from the north of England, but now live in London.
+        London-based developer and subject-matter expert at IBM Quantum.
+        I help people use our products through documentation, software support,
+        and learning tools for general quantum computing.
         <p>
-        I currently work for IBM Quantum, where I sit somewhere between science
-        writer and software developer. My role is helping people use our
-        products through documentation, software support, and teaching about
-        quantum computing in general.
-        <p>
-        The most important skill in my work is making things easier to
-        understand, whether it's a concept in physics or a block of code.
-        </p>
+        The most important skill in my work is making things easy to
+        understand. Whether learning Physics, editing code, or using an app,
+        the quicker someone understands, the quicker they can do what they
+        need, and the happier they'll be.
       </span>
     </Accordian>
   {/if}
