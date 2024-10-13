@@ -68,9 +68,9 @@
               `A developer advocate improves the experience for developers that use
               IBM Quantum's products. For me, this includes helping developers
               understand concepts in quantum computing through learning materials and
-              <a href='https://github.com/Qiskit/documentation/'>documentation</a>,
+              <a href='https://docs.quantum.ibm.com'>documentation</a>,
                as well as supporting their projects through our official software
-               <a href="https://qiskit.org/ecosystem/">Ecosystem</a>.
+               <a href="https://www.ibm.com/quantum/ecosystem">Ecosystem</a>.
               <p>
               I previously wrote and managed content for IBM's online <a
               href='https://github.com/qiskit/textbook'>quantum computing textbook</a>.
@@ -165,7 +165,7 @@
       <span slot="content">
         <ul>
           <li>Email me at <a href="mailto:frankharkins@hotmail.co.uk">frankharkins@hotmail.co.uk</a></li>
-          <li>Add me on <a href="https://www.linkedin.com/in/francis-harkins-382324151/">Linkedin</a></li>
+          <li>Add me on <a href="https://www.linkedin.com/in/frank-harkins/">Linkedin</a></li>
         </ul>
       </span>
     </Accordian>
