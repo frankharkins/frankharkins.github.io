@@ -114,6 +114,13 @@
         <p>Personal projects of mine.</p>
         <ul>
           <ProjectBullet
+            title="Snap!"
+            link="https://frankharkins.github.io/snap"
+            description={
+              `A simple game with CSS animations and websockets`
+            }
+           />
+          <ProjectBullet
             title="quPython"
             link="https://github.com/frankharkins/qupython"
             description={
