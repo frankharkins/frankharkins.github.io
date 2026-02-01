@@ -1,15 +1,35 @@
-<script>
+<script lang="ts">
 	import Accordion from "$lib/home/Accordion.svelte";
 	import Link from "$lib/home/Link.svelte";
 	import ProjectCard from "$lib/home/ProjectCard.svelte";
+	import type { Theme } from "$lib/home/ThemeSelector.svelte";
+	import ThemeSelector from "$lib/home/ThemeSelector.svelte";
 	import TimeLine from "$lib/home/TimeLine.svelte";
+
+	let theme: Theme = $state("System");
 
 	const email = "frankharkins@hotmail.co.uk";
 </script>
 
+<svelte:head>
+    {#if theme === 'Dark'}
+        <style>
+          :root {
+            background: var(--color-black);
+          }
+        </style>
+    {:else if theme === 'Light'}
+        <style>
+          :root {
+            background: var(--color-white);
+          }
+        </style>
+    {/if}
+</svelte:head>
 
-<div class="max-w-5xl mx-auto">
-    <div class="max-w-2xl p-12 sm:p-18">
+<div class="max-w-5xl mx-auto" data-theme={theme}>
+    <div class="relative max-w-2xl m-12 sm:m-18">
+        <ThemeSelector bind:theme={theme} className="absolute right-0 top-0"/>
         <h1 class="font-bold text-title mb-2">Frank Harkins</h1>
 
         <p>

@@ -25,7 +25,15 @@
     --color-focus: var(--color-blue);
     --color-cursor: var(--color-blue);
 
+    background-color: var(--color-white);
     @media (prefers-color-scheme: dark) {
+        background-color: var(--color-black);
+    }
+
+    color: var(--color-body);
+    transition: all 0.1s ease-in-out;
+
+    [data-theme="Dark"] {
         --color-title: var(--color-white);
         --color-bg: var(--color-black);
         --color-body: var(--color-grey-03);
@@ -36,16 +44,28 @@
         --color-cursor: var(--color-cyan);
     }
 
+    [data-theme="System"] {
+        @media (prefers-color-scheme: dark) {
+            --color-title: var(--color-white);
+            --color-bg: var(--color-black);
+            --color-body: var(--color-grey-03);
+            --color-muted: var(--color-grey-05);
+            --color-muted-extra: var(--color-grey-06);
+            --color-link: var(--color-cyan);
+            --color-focus: var(--color-cyan);
+            --color-cursor: var(--color-cyan);
+        }
+    }
+
     font-family: "Source Code Pro", "sans-serif";
     line-height: 20px;
     @media (max-width: 640px) {
         font-size: 15px;
         line-height: 18px;
     }
-    background-color: var(--color-bg);
-    color: var(--color-body);
 
 }
+
 @theme {
   --color-title: var(--color-title);
   --color-bg: var(--color-bg);
