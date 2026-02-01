@@ -1,6 +1,6 @@
 <script lang="ts">
     import clsx from 'clsx';
-    export type Theme = 'Light' | 'Dark' | 'System default';
+    export type Theme = 'Light' | 'Dark' | 'Default';
     type Props = {
       theme: Theme;
       className: string;
@@ -13,8 +13,8 @@
 
     function getNext(old: Theme): Theme {
       if (old === 'Light') return 'Dark';
-      if (old === 'Dark') return 'System';
-      if (old === 'System') return 'Light';
+      if (old === 'Dark') return 'Default';
+      if (old === 'Default') return 'Light';
     }
 </script>
 

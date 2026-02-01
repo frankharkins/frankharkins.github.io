@@ -44,7 +44,7 @@
         --color-cursor: var(--color-cyan);
     }
 
-    [data-theme="System"] {
+    [data-theme="Default"] {
         @media (prefers-color-scheme: dark) {
             --color-title: var(--color-white);
             --color-bg: var(--color-black);

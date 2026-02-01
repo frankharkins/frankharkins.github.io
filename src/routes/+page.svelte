@@ -6,7 +6,7 @@
 	import ThemeSelector from "$lib/home/ThemeSelector.svelte";
 	import TimeLine from "$lib/home/TimeLine.svelte";
 
-	let theme: Theme = $state("System");
+	let theme: Theme = $state("Default");
 
 	const email = "frankharkins@hotmail.co.uk";
 </script>
