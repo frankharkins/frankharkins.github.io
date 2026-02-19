@@ -11,10 +11,14 @@
       theme = getNext(theme);
     }
 
+    const NEXT_THEME: { [t in Theme]: Theme } ={
+      Light: 'Dark',
+      Dark: 'Default',
+      Default: 'Light',
+    };
+
     function getNext(old: Theme): Theme {
-      if (old === 'Light') return 'Dark';
-      if (old === 'Dark') return 'Default';
-      if (old === 'Default') return 'Light';
+      return NEXT_THEME[old];
     }
 </script>
 

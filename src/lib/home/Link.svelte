@@ -7,7 +7,7 @@
 	    className?: string;
 	    children: Snippet;
 	}
-    const { href, className, children } = $props();
+    const { href, className, children }: Props = $props();
 </script>
 
 <a href={href} class={clsx("text-link", className)}>

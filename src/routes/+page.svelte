@@ -79,25 +79,39 @@
             <Accordion title="Projects">
                 <ul>
                     <ProjectCard
+                        title="Event loop"
+                        description={`A todo app tailored for async work,
+                        inspired by Node's event loop. Keep working on a task
+                        until you're blocked, then move onto the next one.`}
+                        links={[
+                          { text: "Try it", url: "https://frankharkins.github.io/event-loop/" },
+                        ]}
+                    />
+                    <ProjectCard
                         title="Snap!"
-                        description="A simple game with CSS animations and websockets"
+                        description={`An online, two-player card game, and my
+                        first foray into server programming in Rust. Play online
+                        with a friend.`}
                         links={[
                           { text: "Play", url: "https://frankharkins.github.io/snap" },
                         ]}
                     />
                     <ProjectCard
                         title="quPython"
-                        description="A reimagining of how we write quantum programs in Python"
+                        description={`A library to write object-oriented quantum
+                        programs, rather than the assembly-like approach of most
+                        other libraries.`}
                         links={[
                           { text: "Try it", url: "https://github.com/frankharkins/qupython" },
                         ]}
                     />
                     <ProjectCard
                         title="Carbon footprint calculator"
-                        description={`A small project to help me learn web
-                        development with Svelte. After trying other online
-                        calculators, I wanted to create something that showed
-                        the effects of lifestyle changes in real time.`}
+                        description={`Rather than just showing a calculation, I
+                        wanted to be able to see how different factors affected
+                        my footprint. Fill in your information, then move the
+                        sliders to see what effect different lifestyle changes
+                        have.`}
                         links={[
                           { text: "Try it", url: "https://frankharkins.github.io/carbon-footprint/" },
                         ]}
