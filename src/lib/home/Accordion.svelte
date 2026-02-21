@@ -1,4 +1,6 @@
 <script>
+	import clsx from "clsx";
+
     const { title, children } = $props();
 
     let expanded = $state(false);
@@ -20,8 +22,8 @@
             <h2 class="font-bold">{title}</h2>
         </div>
 </button>
-{#if expanded}
-    <div class="py-0">
+<div class={clsx("py-0 transition-all duration-500 ease-out max-h-0", { "max-h-[800px]": expanded })}>
+    {#if expanded}
         {@render children()}
-    </div>
-{/if}
+    {/if}
+</div>
