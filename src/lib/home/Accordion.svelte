@@ -22,7 +22,7 @@
             <h2 class="font-bold">{title}</h2>
         </div>
 </button>
-<div class={clsx("py-0 transition-all duration-500 ease-out max-h-0", { "max-h-[800px]": expanded })}>
+<div class={clsx("py-0 transition-all duration-500 ease-out max-h-0", { "max-h-[1200px]": expanded })}>
     {#if expanded}
         {@render children()}
     {/if}
