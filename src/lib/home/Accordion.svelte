@@ -8,20 +8,20 @@
     }
 </script>
 
-<div class="relative my-2">
-    <div class="absolute -left-6 cursor-pointer" onclick={toggleExpanded}>
+<button class="relative -m-px p-px hover:bg-title group block my-2 cursor-pointer" onclick={toggleExpanded}>
+    <div class="absolute -left-6">
         {#if expanded}
             =
         {:else}
             -
         {/if}
     </div>
-        <button class="text-title hover:bg-title hover:text-bg w-min cursor-pointer" onclick={toggleExpanded}>
+        <div class="text-title group-hover:text-bg w-min">
             <h2 class="font-bold">{title}</h2>
-        </button>
-        {#if expanded}
-            <div class="py-0">
-                {@render children()}
-            </div>
-        {/if}
-</div>
+        </div>
+</button>
+{#if expanded}
+    <div class="py-0">
+        {@render children()}
+    </div>
+{/if}
