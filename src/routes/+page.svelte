@@ -86,6 +86,7 @@
                         links={[
                           { text: "Try it", url: "https://frankharkins.github.io/event-loop/" },
                         ]}
+                        index={0}
                     />
                     <ProjectCard
                         title="Snap!"
@@ -95,6 +96,7 @@
                         links={[
                           { text: "Play", url: "https://frankharkins.github.io/snap" },
                         ]}
+                        index={1}
                     />
                     <ProjectCard
                         title="quPython"
@@ -104,6 +106,7 @@
                         links={[
                           { text: "Try it", url: "https://github.com/frankharkins/qupython" },
                         ]}
+                        index={2}
                     />
                     <ProjectCard
                         title="Carbon footprint calculator"
@@ -115,6 +118,7 @@
                         links={[
                           { text: "Try it", url: "https://frankharkins.github.io/carbon-footprint/" },
                         ]}
+                        index={3}
                     />
                     <ProjectCard
                         title="Launchpad whackamole"
@@ -122,6 +126,7 @@
                         links={[
                           { text: "See source", url: "https://github.com/frankharkins/launchpad-whackamole" },
                         ]}
+                        index={4}
                     />
                     <ProjectCard
                         title="CNOT"
@@ -129,6 +134,7 @@
                         links={[
                           { text: "Start learning", url: "https://cnot.io/" },
                         ]}
+                        index={5}
                     />
                 </ul>
             </Accordion>
