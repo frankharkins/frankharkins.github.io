@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Accordion from "$lib/home/Accordion.svelte";
 	import Link from "$lib/home/Link.svelte";
+	import Li from "$lib/home/Li.svelte";
 	import ProjectCard from "$lib/home/ProjectCard.svelte";
 	import type { Theme } from "$lib/home/ThemeSelector.svelte";
 	import ThemeSelector from "$lib/home/ThemeSelector.svelte";
@@ -37,7 +38,7 @@
         </p>
 
         <div class="mt-8">
-            <Accordion title="Experience">
+            <Accordion title="Experience" ordered={true}>
                 <TimeLine events={[
                   {
                     title: "Software developer",
@@ -77,7 +78,6 @@
             </Accordion>
 
             <Accordion title="Projects">
-                <ul>
                     <ProjectCard
                         title="Event loop"
                         description={`A todo app tailored for async work,
@@ -136,17 +136,14 @@
                         ]}
                         index={5}
                     />
-                </ul>
             </Accordion>
             <Accordion title="Contact">
-                <ul>
-                    <li>
-                        Email me at <Link href={`mailto:${email}`}>{email}</Link>.
-                    </li>
-                    <li>
-                        Add me on <Link href="https://www.linkedin.com/in/frank-harkins/">LinkedIn</Link>
-                    </li>
-                </ul>
+                <Li index={0}>
+                    Email me at <Link href={`mailto:${email}`}>{email}</Link>.
+                </Li>
+                <Li index={1}>
+                    Add me on <Link href="https://www.linkedin.com/in/frank-harkins/">LinkedIn</Link>
+                </Li>
             </Accordion>
         </div>
     </div>

@@ -2,7 +2,7 @@
 	import clsx from "clsx";
 	import { onMount } from "svelte";
 
-    const { title, children } = $props();
+    const { title, children, ordered = false } = $props();
     const uid = $props.id();
 
     let expanded = $state(false);
@@ -23,6 +23,13 @@
       window.addEventListener('resize', setContentsHeight);
       setContentsHeight();
     })
+
+    const listClass = $derived(
+      clsx(
+        "*:opacity-0 box-border p-[0.5px] invisible",
+        { "*:opacity-100 visible": expanded }
+      )
+    );
 </script>
 
 <button class="relative -m-px p-px hover:bg-title group block my-2 cursor-pointer" onclick={toggleExpanded}>
@@ -43,7 +50,13 @@
     )}
     style={ expanded ? `max-height: ${contentsHeightPx}px` : "" }
 >
-    <div id={uid} class="box-border p-[0.5px]">
-        {@render children()}
-    </div>
+    {#if ordered}
+        <ol id={uid} class={listClass}>
+            {@render children()}
+        </ol>
+    {:else}
+        <ul id={uid} class={listClass}>
+            {@render children()}
+        </ul>
+    {/if}
 </div>

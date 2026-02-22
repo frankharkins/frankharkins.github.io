@@ -10,11 +10,10 @@
       sourceLink?: string;
     };
     const { title, index, description, links }: Props = $props();
-    const fadeInAnimation = "animate-[0.4s_ease-in_var(--fade-in-delay)_both_fade-in-anim]";
 
 </script>
 
-<Li className="my-8 list-none {fadeInAnimation}" style="--fade-in-delay: {index*100}ms">
+<Li className="my-8 list-none" index={index}>
     <h3 class="text-title mb-1">{title}</h3>
 
     <div class="mb-1">
